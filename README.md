@@ -28,3 +28,13 @@ Then go to **System Settings → Privacy & Security → Accessibility** and turn
 - ⌘⇧V is taken over system-wide, so the "Paste and Match Style" shortcut in other apps won't work.
 - Text is pasted back as plain text, without formatting.
 - History is stored in `~/Library/Application Support/Clipboard/`.
+
+## DMG installer
+
+```bash
+./make-dmg.sh
+```
+
+This creates `build/Clipboard-1.0.dmg`. Open it and drag **Clipboard** onto **Applications**.
+
+The app is only ad-hoc signed and not notarized, so on another Mac Gatekeeper will block the first launch. Right-click the app → **Open**, or allow it in **System Settings → Privacy & Security** ("Open Anyway").
